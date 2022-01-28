@@ -13,3 +13,5 @@ npm install --save redux react-redux
 react-scrollmagic";
 "react-gsap";
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+npm install @mui/lab
+npm i react-scroll-parallax

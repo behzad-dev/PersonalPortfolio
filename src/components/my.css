@@ -1,0 +1,18 @@
+.custom-shape-divider-bottom-1643280713 {
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1643280713 svg {
+  position: relative;
+  display: block;
+  width: calc(145% + 1.3px);
+  height: 152px;
+}
+
+.custom-shape-divider-bottom-1643280713 .shape-fill {
+  fill: white;
+}
+
+.custom-shape-divider-bottom-1643280713 .shape-fill2 {
+  fill: linear-gradient(red, yellow);
+}

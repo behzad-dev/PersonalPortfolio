@@ -1,22 +1,44 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import HelloWorld from "./HelloWorld";
 import MyClass from "./MyClass";
 import MenuBar from "./AppBar";
-import ProductHeroLayout from "./Body";
-import ProductValues from "./Body2";
-import Body3 from "./Body3";
-import Body4Grid from "./Body4Grid";
-import Skills from "./reusables/Skills";
+import ContentTop from "./ContentTop";
+import ContentHolderTimeLine from "./ContentHolderTimeLine";
+import Footer from "./Footer";
+import ContentGrid from "./ContentGrid";
+
+import FlyText from "./FlyText";
+import FlyText2 from "./FlyText2";
+import FlyText3 from "./FlyText3";
+import CustomizedTimeline from "./Timeline";
+import MyParallax from "./Parallax";
+import Parallax2 from "./Parallax2";
+
 function App() {
   return (
     <div className="App">
       <MenuBar></MenuBar>
-      <ProductHeroLayout></ProductHeroLayout>
-      {/* <Skills></Skills> */} <Body4Grid></Body4Grid>
-      <ProductValues></ProductValues>
+      <ContentTop></ContentTop>
+      <ContentGrid></ContentGrid>
+      <ParallaxProvider>
+        <ContentHolderTimeLine></ContentHolderTimeLine>
+      </ParallaxProvider>
+
+      {/* <FlyText2></FlyText2>
+      <FlyText3></FlyText3> */}
+      {/* <ParallaxProvider>
+        <div style={{ height: "500px" }}>
+          s<Parallax2></Parallax2>
+        </div>
+      </ParallaxProvider> */}
+
       {/* <Body3 /> */}
+      {/* <FlyText></FlyText> */}
+
+      <Footer></Footer>
       <Router>
         <div>
           <ul>
