@@ -9,13 +9,9 @@ import ContentTop from "./ContentTop";
 import ContentHolderTimeLine from "./ContentHolderTimeLine";
 import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
-
-import FlyText from "./FlyText";
-import FlyText2 from "./FlyText2";
-import FlyText3 from "./FlyText3";
-import CustomizedTimeline from "./Timeline";
-import MyParallax from "./Parallax";
-import Parallax2 from "./Parallax2";
+import CustomizedTimeline from "./reusables/Timeline";
+import MyParallax from "./reusables/Parallax";
+import Parallax2 from "./reusables/Parallax2";
 
 function App() {
   return (
@@ -27,16 +23,11 @@ function App() {
         <ContentHolderTimeLine></ContentHolderTimeLine>
       </ParallaxProvider>
 
-      {/* <FlyText2></FlyText2>
-      <FlyText3></FlyText3> */}
       {/* <ParallaxProvider>
         <div style={{ height: "500px" }}>
           s<Parallax2></Parallax2>
         </div>
       </ParallaxProvider> */}
-
-      {/* <Body3 /> */}
-      {/* <FlyText></FlyText> */}
 
       <Footer></Footer>
       <Router>

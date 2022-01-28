@@ -1,6 +1,7 @@
 import { ParallaxBanner } from "react-scroll-parallax";
-import BehTransparent from "./reusables/BehTransparent.png";
-import stars from "./reusables/stars.jpg";
+import BehTransparent from "./BehTransparent.png";
+import stars from "./stars.jpg";
+import ContentGrid from "../ContentGrid";
 // const Parallax2 = () => {
 //   return (
 //     <ParallaxBanner
@@ -25,7 +26,7 @@ import stars from "./reusables/stars.jpg";
 //   );
 // };
 // export default Parallax2;
-import ContentGrid from "./ContentGrid";
+
 const Parallax2 = () => {
   const background = {
     image:

@@ -15,7 +15,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Divider from "@mui/material/Divider";
 import { CardActionArea } from "@mui/material";
 import Steppers from "./reusables/Stepper";
-import TabPanel from "./myTab";
+import TabPanel from "./reusables/myTab";
 function ContentGrid() {
   const WavePart = styled("div")(({}) => ({
     color: "red",

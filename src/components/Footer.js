@@ -2,7 +2,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/system";
-import Parallax2 from "./Parallax2";
+import Parallax2 from "./reusables/Parallax2";
 import { ParallaxProvider } from "react-scroll-parallax";
 const MyComponent = styled("div")({
   color: "darkslategray",

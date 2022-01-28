@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
 import MuiTypography from "@mui/material/Typography";
-import CustomizedTimeline from "./Timeline";
-import Parallax2 from "./Parallax2";
+import CustomizedTimeline from "./reusables/Timeline";
+import Parallax2 from "./reusables/Parallax2";
 import { Parallax } from "react-scroll-parallax";
 const item = {
   display: "flex",

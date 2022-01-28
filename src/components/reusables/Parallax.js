@@ -1,5 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
-import BehTransparent from "./reusables/BehTransparent.png";
+import BehTransparent from "./BehTransparent.png";
 const MyParallax = () => {
   // const { ref } = useParallax({ speed: 10 });
   return (
