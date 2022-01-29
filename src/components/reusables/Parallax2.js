@@ -1,5 +1,5 @@
 import { ParallaxBanner } from "react-scroll-parallax";
-import BehTransparent from "./BehTransparent.png";
+// import BehTransparent from "./BehTransparent.png";
 import stars from "./stars.jpg";
 import ContentGrid from "../ContentGrid";
 // const Parallax2 = () => {

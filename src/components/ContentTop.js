@@ -4,7 +4,7 @@ import MuiTypography from "@mui/material/Typography";
 import MuiButton from "@mui/material/Button";
 import "./ContentTop.css";
 import BounceBall from "./reusables/BounceBall";
-import BehTransparent from "./reusables/BehTransparent.png";
+// import BehTransparent from "./reusables/BehTransparent.png";
 const LayoutRoot = styled("section")(({ theme }) => ({
   color: theme.palette.common.white,
 
@@ -35,14 +35,14 @@ function ContentTop() {
             alignItems: "center",
           }}
         >
-          <img
+          {/* <img
             style={{
               height: "400px",
               position: "absolute",
             }}
             src={BehTransparent}
             alt="Logo"
-          />{" "}
+          />{" "} */}
           <div width="147" height="80"></div>
           <MuiTypography
             zIndex="1"

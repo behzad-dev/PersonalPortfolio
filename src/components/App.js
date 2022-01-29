@@ -12,24 +12,27 @@ import ContentGrid from "./ContentGrid";
 import CustomizedTimeline from "./reusables/Timeline";
 import MyParallax from "./reusables/Parallax";
 import Parallax2 from "./reusables/Parallax2";
-
+import Content2 from "./Content2";
+import Content3 from "./Content3";
 function App() {
   return (
     <div className="App">
-      <MenuBar></MenuBar>
-      <ContentTop></ContentTop>
-      <ContentGrid></ContentGrid>
+      {" "}
       <ParallaxProvider>
-        <ContentHolderTimeLine></ContentHolderTimeLine>
-      </ParallaxProvider>
-
-      {/* <ParallaxProvider>
+        <MenuBar />
+        <ContentTop />
+        <div style={{ textAlign: "center" }}>About me</div>
+        <Content3 />
+        {/* <Content2 /> */}
+        <ContentGrid />
+        <ContentHolderTimeLine />
+        {/* <ParallaxProvider>
         <div style={{ height: "500px" }}>
           s<Parallax2></Parallax2>
         </div>
       </ParallaxProvider> */}
-
-      <Footer></Footer>
+        <Footer />
+      </ParallaxProvider>
       <Router>
         <div>
           <ul>
