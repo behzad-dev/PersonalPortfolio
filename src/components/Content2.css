@@ -65,3 +65,24 @@
 
   background-color: red;
 }
+.BGradiant {
+  background: linear-gradient(180deg, #ffd7ff 0%, #301cbe 100%);
+  background-clip: text;
+  color: transparent;
+}
+.changecolor {
+  background: linear-gradient(180deg, #f3db00b9 0%, #f52121 100%);
+  background-clip: text;
+  color: transparent;
+}
+.changecolor2 {
+  background: linear-gradient(180deg, #b906ddb9 0%, #d18fa3 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.changecolor3 {
+  background: linear-gradient(180deg, #fffb0cb9 0%, #df0f0f 100%);
+  background-clip: text;
+  color: transparent;
+}

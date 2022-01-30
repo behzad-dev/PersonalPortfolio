@@ -8,43 +8,141 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
-
+import BehTransparent from "./reusables/BehTransparent.png";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { useEffect } from "react";
+import "./Content2.css";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
+});
 const Content3 = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, easing: "ease-in-sine" });
+  }, []);
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="md">
-        <Paper elevation={24} sx={{ margin: "50px" }}>
-          <Card sx={{ display: "flex" }}>
-            {" "}
-            <CardMedia
-              component="img"
-              sx={{
-                width: "20%",
-
-                display: "flex",
-                flexDirection: "column",
-              }}
-              image="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFhUZGRgYGBoZHBgYGhwaHBoYHBwaGRgYGBocJC4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhIRHjEkJCQxNDQxNDE0NDQ0NDQ0NDE0NDQ0NDE0NDQ0NDQ0NDExNDQ0NDQ/NDQ0PzQ0NDQxNDQxMf/AABEIARwAsgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAEDBAYCB//EAEgQAAIBAgMEBQgFCAoDAQEAAAECAAMRBBIhBQYxQSJRYXGBExQykaGxwdEHQlJykhYjJENTYoLhFTNEVHODk6Ky8DRjwvFV/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAlEQACAgICAgICAwEAAAAAAAAAAQIRITEDEkFRIjJhcROR8EL/2gAMAwEAAhEDEQA/APJSYgYooArx7xo4gCvFeKKCj3ivFFAFeOIrSTD0wxsTYdfGVIEbGcB51Upm9pCyEQ01shMDHvIUeTASActpIi8KYDC579BW0+s+WVcRhlBPDw4eE0ogreVnQaQ1FtFSPKRoEwMV4o0gFeIGKIQAjQ9Fe4e6KKh6K9w90eADIoooAoo8UAQjxo8FFHjTtFJ0Auerrir0CxgMC9ZslNCzWLWHUBc+EnCojr6TJpmOgP7yry7jL1emlEKKNRixS1Vh0RduKL16WBlfAYF67rTRbk6dijrPZPXHjUY2zm5ZojxNcOcoZvJqTkzm5QHkYPqU7aQjtnZVTDOUcdoYcGHZKivfQ+EripRCdA50tO0aWqlPrnOEw2d1S9s5y3755nFxeTV2cJ3++W8ZTRcuVy10BJtazEar2zW4XcO+prHwWWH3FUHWqx045ROkZRojTPOqnCcUuM028e764dMwdie20zVIazjJ2zRNEYojIBowjxoAToeiuvIe6Kc0gco7hGgA+KKKAKPFFAEI8Vo4EAQEt4albXhbn1RsNT5/9EsopYhFBJJ0A4seyerj41FdmYlLwh6aNUZURSSx6KjiT1mer7p7urhksTeo9i7f/IkO6W63myCrUF6ri/3QeS9R7eyal7kjn3THLyNukWMayCtu7ATFoabgXFyjDirW4ieO7X2PUw1QpUGvJhwcdYnvWGQlu4X42g3bewkxKtTcXsLqw4qbXuJiE6K0eIYZFc5XbKuvSsTbQmxt1m0tYM+bVh5RAbG4vra/Agjvku3Ni1MM+Vxccmtow+cpo+dQjG4HA9V+s9U9EoqcTN0z1rZuIV0VlPIXt1y3iRp4TzPCYmtgXCODkaxBBupHHongZu9nbYSuvROtuHX2ieJxcXTOmzKb7JekZ55SM9N3zp/mXnmNLjCBPFEIpSDRjEYjACNFhlGvIe6Kc010HcIoBQIjxooAo8adWgCUS3h6F7E8JxQpXt7pbvpYeNtfAT1cXF1XZmJS8I642VdeVh9Y8gJ6Xufut5FRWqC9U8Bx8mDy75W3L3X8mBXqrd7XRSLhFPM9s3dKvlVhbjaZ5uS8IRiNnutr8LaR8MwDgtw7JndtbyUcPozZn+wup8eqZtt58ViGIopqLaJ0rA8LngDOKjJm7R6LWYFiVvGpvlbkTYj1i084xO0No0VLupCDiWUMAO2xlvZ2/C58j2IBsHS/UDcqdQL3j+OVWLRr9qbLSujpUGntB5EdRnkW8W79TCvqCUPovyI+y3UfXPZsPikqoGR82c304SDH4RKqFHUFW0IPwmocji8kcUzxuntljQbDOodL3XN6VNutD1Hqg+liHosLE24gjjfsPKGt593Hwzki5Q+i3V2GA1YEWPD3T0uMZxMptMO47b4rYdkfRwLfeHzmMQ2Mu1aVuPDkZTqJPJKLi6ZpOyYGKQI8mBmSiiEaOIASoHor3D3RRqHor3D3RQAbHEYxQBCW8NRvqZxRo85bJtpw+E9XFxJfKRiUvR3oB/31CbrcndiwGIrLx1RDy/eYSvuZuxnIr116A9BG5n7bT0MD/omebl/5iIxJaVXKG04i0yu+O8IwyZEP51xp+6ObGaN3ygk8ALnuGp9l551srZQ2jWrVqpbJeykHgNQlvDWcoRT+TNN+Alu/ukroK2J/OGoMwXNpYjiSOJ7JHuinm2MrYYcD6INr2HSFh3GSYbGPs21GqztSLMRYAgLyKfvdawTiDXx2JathkZLZQHvl1XgSe6wt2Trlp28GQ/8ASFj8lFaStZqjW6zYdXaTYQim7NDyCUmQAhR0xo4e2pv1k8pmdpbGx2lR8tUqUb0sxAQ5gADyvxlvG72PWprToIVrP0TzAHAlP58JKfVU9FvOQZgtpjAVmUVs6BwpTmQeLr1W5z0ylXSoFcEBStwRrfTQ+MyGG3PRcM4cBqzi+fiQ3EAdkj3AxxKPQY/1TDL90308DJNJq0EzX7SwSOpRrOrLreeRb1btvhXzKC1Jjo3Er+63ZPXSZDiKKupR1DKwsQeYMxDkcWacbPDEe4KnUHl8ZUr07acuRmw3p3WbDkvTBNLq4lOw9kzdJhwYXHV8p6pKM42c8xBNSnzjI9pcr0cvcZTqJaeSUHF5Np2SgxXkStJDMlCVFeiO4e6NOafAdwigFAyxh6YPGV7y1hqgUXB16re2deJLtkzLRZykcRb4DrMO7p4TDs/lMTVRUUjKjHV26z2QArtYPlYrfXgbnlfsmo3f2FUxKM6OqDNaxUceOlu+emcotGIo27b14MGwrrbhwNu4acIvyuwd/wCuH4W+Uzw3Mr/tROl3MqnjW9s83WHs6WwltjevDNRdadS7lGCjK3G3PTTnKO6+28NhqCozNn4tZGPLTW0jbcHN6Tsf4v5SRNwE5s/4/wCUnxSqxTId8Nu0K1NEW5s2cnKQQFB4X5kwpsrefCIi0kFQWUaFRqeZJvKa7gp1v/qfISVNxEH1n7vKGx7SLambuPXrZOruw0d46Fr3PDs+cyK7Vo08Z5xRR2VgQ6BNelxK91hC/wCQlPmz/wCoflOk3CRjozg9jt7OqSMorBHbCn5S0ymYJU01Iym9r2HjMVs3aPmmJeuqF8+csgsCtnJXNfsM0Vf6PlU2Z38XY/GcpuJTv1+J169OEqlxpUVpsZ96a+pGFVbAEh6ljZuBkWK3rxKKHbDIFOgOcn3SRtwKfWR4sZw/0eIov5Rh4/zkvj9FfbwUKu/TsCGwykHQjMTp1aiZDG0tTUVMqE2sDcKx5X6puh9HqH9afGZje/YC4UoFfMXB9Llb3zcZRX1MtPyAy6tcShiaeU25SdkNrgr4SlVqE6GXllayIpojRZLI6cknlNl6nwHcIp1RbojuHuigA8ztDrODHp8ZY4Yei6X04WHZPXty8F5PCp1v0z/FwnjN9J7lu6P0ajr9RZ15ZYMoJxxGy9scCeY6GZ3h3obDVQnk7grcPfmOItKCb7OeNE+pvlLm/uGVqaMRqKi68+DeyX6uELBCFJGReGg4CeiMY9baObbugOd9HtcUSe4N8ox32f8Au7eo/KaHB4UgMCvI2vrrIvMNL5NfjHw9DIDG+z8PJG/cflHG+tYEWonwDfKafE4QFNF104cZUXBH7B05wnx1oOwNid8MTdT5ENmANxn07G00kOK3zq07k0/ROh6Qzdim3j4TTVsC7PYJcWF7QdvHg8uDr5lFwuYXANiDx9stRFsJbB2vUxFEO4KBtbc++X2g3d4Dzemf3BCNhOMt0bQhaYr6UaCmlTdRbK5XXXRlJ+E2lplPpEpg4UH7NRD7GHxmuP7Elo8rF7GD6h1hMjQwZUnbn0jMRU5IJHSkgnnNBKgOivcPdGioHor3D3RQAcYl4xjxnS8ZUCUjoz27dhs2FoG/1BPFB6HjPZ9zwPM6P3BOnKsIyg3aPac2ERnnNme35/qF7HT4iXLPkQi9sicO6Ud+B+jjX66fGXyXAQKWsETgOwTuvqjHknwwfXQ8NO+cWqXB6REfDO+t8xsCdRzlc4qp1n1SFYUrlsml79kHZXDa5rGXq7sEuvHSUFq1AdXa3dItMMs4qm99M3Dlf4QbtxCuExF72yc/CX8TVfPZWYC3L+UH7dLeZ4jMT6Gl/CaXgj0X93h+jU9fqCEbQfu9bzal9wQhYTlLZtaObQDvpSDYOp2FG9Ti/vMPi0E715Rgq51uE8OM1D7Ij0eONwMF1IWfQGCavGejn0jMRqc7nFOdzzGghQ9Ffuj3RR6Hor90e6KADrzpOM4PGSUzrxtKtglLdHv4ds9n3MI8zon9yeM13u173ub687z0ndXeXDUcMlN3fOt7jI1tddDzm+RtpIiwbmPYTODfLDdb/gadrvhhPtsP4GnPq/Rqx98aatQyk2GZedtRwlt8bZVCuLBF1GvKZfebaWExQX89UUqb6U2sb98DIKA/tNTT/wBc7xj8aZh2ei4XFk5rtewJHLWVRjn6/ZMKatD+81fBGjec0f7zW/C3wlUERtnpmJxBRMwOpg5Ma/WbX6pjkpYdhc46oOwo/wABJKeDwzEj+kWFusOO3mvZHVJULZt8VinVui+UW5QTt6uzYPEXYno2F9DckcPXM+cFh/8A+if9x/8AmTpsvDFCx2gdQVIKubjqAydsnVDJrt37ebUxfUIsI2Ex2wdp4LDIVFd3vxzK+g7LgQsu9mEP63/Y/wApxlF2bQasIG3vKjA4jjfILeuR1N7sGP1hP3abmUdr7xYOvhq1MVSrOhC5kYXMRVMM8vZtDBtU6whRy65ybW4DrlHEWvpO3K7RmKI0M7JnCcZ2JwNF6mdB3CPO6Hor90e6KADTO6c4MlojXwmo7IwpsTDNiKqUrgFrhSRe2l9ZrF3IxH2qduvUTPbmG2No/fI9hnqO82KNPDVWU2bKQOwnT4zo5NSpEoxB2BlfIcTQznTLm59Rlz8kK1r56RA5309cp7mbs0sSlV6rNdWCjKdRpcsTzN42+avhadPCpUcoS9RieJ1FgSOWsrm06FIuJupUc2WpSJ42Vrn1Sb8i63N0EFbS2emHwOGxVEslRsoZwfSDKTqO8CWtub11KmBpFTld2ZHIPEJxIPbDm3oUi8m5r/tE9Yjvua41aogA4k/OA6mGRdmJiVLiqKts2ZvtEWNz1A+M1Gwto+dbOfPqyIyMTzstwfVHeQpFOnuirmy1kZuNl+UVTdJBe+JpAg+iSL++ZTY+3Hwwd11qNTCIT9QaliB6pstgbr0K2DUu2d6vTNQekpueipPAjgfGWUnHbIkmVhupSOgxNO/ePnJl3IvwqKe4X1mebdtU2guE8o+Urnz6BuBNpuG2UMNhcQqO7Fg7lmNzmy20PLQTPd4/JaQCxO66URnerTCj7QNj6jIcJutTqhnp1kdVNiVBAHZqYG2PtXDqrjFqalhdAzm1xysecJbQRRsw18PTNIVnQuqE2CKW6XYDpczTk1hkSsvLuerdFHpkj7JJIjHcdr2Z7DsGvhMTsp3erYYgUmPouxIBfSyluV+2embnnECmyYkNnSobMxuGUi4KsOI1PqmZTaRUjCb27MXCuiC7AoW1sDcm1tOUydabv6Tn/PoOqnr4sZg6nKSTwVI5TjOxI1nYnIoToHor3D3RRUD0V7h7ooANklE6zgx1vyF/+3li6YNJuahbG0TyBzE9gB1nre08GK1J6dx0lIv28p4hszab0mzJobWHcYVbezED65E6Si3LsiJpbNJsJMZgWdBhndXIva1tARmB8R6oR3y2LVxlGnVSmVqpe9NrZsp5XEx1PfDED67d0lXfPEfbMri27JaRax2GxmIw1DC+aOvkmuXNrMQCq92jH1QpjdyKnmKIpBrIzORewbNxUQMu+df7bTn8sax+s3gY6S8C0R4inivNFwZw1To1C+YL4hdNON9e2bXdvYz4bAujqS7hmKDjciwHfMid8cSAOk4vwJB1tx75x+WeI+0YcJDsg1upu1mp1aWIw5QsAUqELcW4Ze0HWLdJMbhfKocM7JlZkBsAXHO44ZvjAT744g8Xb1zkb11z9d7felcJPYUkXqlTHPjBjFwrhlsApBtaxBzG+vEzY1K+JrYFy9G1Zwyinf6pJUE37JjMHvXiHDKqO7W4q7G1udhxkybYx5JOR9LXFmGhtbXxEy4O0LJtgYTEYYuXwDOGsCWCmwHG3GF/6XxNSjWSng/JFEuilbhhexQg6G4JgNd4caDco+UGxXpD1aXlSrvHir8H9TfKbkpP0E6KO2NkO7IaeDqU2K9NQLrmPDLfgCOU9J3WwdSjhqaVW6YBuCdRfULf2TG4fezEBCGpOzfb6Yt/CBKrbyYnKWYOFH1irAesic5Rky2WvpKwrHEIUBbOltOsEm3qMwGIQg2IsRDe09t1K9s5Nkvl0tY98C1GzcYkmlkESTsxlWPaczRfp8B3CPOaaaDuEUApnjCGwwDiKQPolwGHWDoR7ZQlvZRtWp/fT/kJLISbTwopVqlMcEdgO7iPfKqi515C/XeFN4h+l4j75/4iDqNMluvT2T0JfFGWdgkjXw6ye3sh7Y2x0qNZ6qoBbMx49yjh4znd7ZRxNZUIso1bryrxljaG7ldMQaKAdPM6croOvuvOnxWGTJq8HsXZqal0cj6zvf1DgJcNLZp0IoeOWYsbp4u2qr+ITpd0sV1D8Ux1V3Yv8Gi2lsLA1VASuqZbkKHugJ6kJ08JgtqYJqLshYNY8V1uOUO/kdijwKfiMs7ubs+cpUesxJ1RDfUFefrtKmktjfgx4HM6359fUJXJ5QjjNm1KTujDRGAJJAAvwMoBbMwPImbu9Eo3/wBGeHDCqRo2gv33Mjw3nbVnwwqgCkXbPzYEiwP2racZP9GPGrr9n4wjspf03EluFvgt7TldSZfR0RiSR0qdgtrBGsT9ojNx7ZTfZWJBt5yxuL85p0roNMh9c5xVdFIupPR5SdmWjFbRwGMRGdaxbJqbnUL2SY0ar7KrNWcubBwb8ldSBp6podp4lGw9bKpVgjXvzEo0kB2Y4J08k9/Bbj4Q3aTYR5U/A6e2PUpAUkfmzMPARVOE6xI/M0j159P4j8o5NBFNZ0Iyx5wNhKh6K/dHuijUPRX7o90UAoGS4VrOh6nX/kJDOkaxB6iDACu3v/Jr/fPuEJbo46nRd3qW1UKtxfmdYO3iH6VV7WB9aqfjCG51BHd1YAjJmAOuoYT0r6mPJqcFisFSdsQlXpsToToL2uALcNJZqYxKuNwtRGur06muo4EXGsn/AKNoZbiklzbkLyPaCBMXhMoAGV19l5zeWUN4im5c2YAXFhe06em+Vddbm5B/nIsVQBckuBwjpTATKXHG9+uZvAJcMjjMGa4tYa365nd1sclLC2dwparUAubG95osMqgkqwOnATKbN2bTq4Zg6XKV6lieI11tNKqZGWMNg6SEu7CqGNznAOUX5HnaeebWVVxFQJ6OditrWsWLDh2ET0GrsGjlFlvyUEk2vYGwmG3hoqmJqogsqvlA6rKB77zrCrMs1n0Z2vVv1L8YS2S4OKxQI0Xie+w+EF/Rk5D1Ra91HxhLZCjzvGX0By37pmW2X0HhXpkei/Za2vfI8ZkNr5uHL4yQeT5ZuFuHOc11QMtybAcAOInPyaB20HQYesVDXyW6XC3dKmNcDZVT/CI9dh8ZY22qDDVsma+S3S6ieUgx6W2XUFv1XxUzXhA8sce6T48DyVG32Wv+IyGseHdHxlslK3HIb+uOUiKgjxRWnE2EKK9Edw90Uek3RHcIoAPtExsDEYzcD3GAGtvj9IY8ylM/7FhPcOgHruhJAakwJGhFzyg7eD+uU9dGkf8AZb4Qv9HB/SW/wz7xPRfxMeTQ0N2awq5Xq1DSA6LeU1+6QB7by7tanbE4Vbno5gCTc8Oc0lpn9taYrC/ef3TknbD0G6mGRjcxvNVy5bm3GV8fWYNZTYWjU67eTvfW9ryUxfstph1W+UnUTN7CovUw1ZEfKxrPZrX1vzhvBV2a+Y3g3dL0ao/9z++a0mXYIwWGxb1MhcLkYFmNNrEXB0NxMfvK36TXP/tcerSez6zxbePTE1xb9a/vvN8crZlxo0n0dVSvl3FjlQWFwCTroI2Ax2IFapUagw8rcMq2J09EC5ED7qJTdij5ixuwUDRlQXIY3ls10dKtWmcqo4J6BzAtoqg5uE0lnJfBpf6YrgdHDVCdB0gALc75b2N//wBnFXbOJN2GDYWFiBmv6iJmaO12S2ZS+e2VukCNbG2vbC9HFVFrmiAxdwVHTYAEi2bjodJeqsls52ttOs9I00o1FZ/TumgA5A34+EuHGu2za+dMhWmVANtbEa8eyY/E4iq2dznZUIDMXZuOgGp1j7QwtSjSp1WAy1BdVzHhcekOrURJIJgWs1/VO8b6NMfue83kBNzfr1sJNjWNkv8AYFu6cuR2VFaIGPGE5UbCVD0V+6PdFFQHRXuHuiigUDEY8aAF9vvd6dv7vS9eUn4iE/o7/wDK/ga/rEBV6mdlJHAIvgoCj3S/sbFeb4pH5BrMOtCNdBO1fEx5PZDaZ3bn/lYX7zTsb3Yb7R7LqYK2nt+g9eg6uQEYliQdAffMRTvJWaPafHw9kQP5rxlc7zYX9ovqPDlOl2/hTp5VLdXCVvBKLGAFmPdB26D5lrf4ze3WXl21hr6VUHcYD3W2lSQ1w9RVzVSVueK8iI3FjTNgVnje8+uMxH+Kfcs9YTaVAi4qp+Mdk8k2y2fFVWzXDOxBGotwHsA9ccWyyO90hbE9vkqtu/IfhOsHps/EH7WJpr32W/xEt7mYRTiXZ2C5KbWvpcsCv/e+KnSX+jnTMM/nJbLcXyiyg28J0f2J4B7k/ootxC+1xD2GxTHaT3+otYjwU2MoDCqfMjmXTKW1GlnBN4UNFVx1Vs4saVYBrixLLcayshlxVJw1Yi9mdPnrCm+dT81hF5Cjf2iQpSVdn1FLLnNRTlv0rDiZb3tKvh8MyOrZEysAdQePDqmWEZHNpLW1RZaOvGihkPkBkzXN81rW0t3yviKhbKD9Vco7hMS0VHIeK84jiYNBOkOiO4RTmieiO4e6KAVTHEcjWOqyFNlgtyarojpUQBlUgMGvqLyZ9ycSNc9M8+BEJbOwjvTRlx7U8yIQl16ItyvrLY2dieW0j45DOibrZhgE7n4nqQ+J+UT7pYr7CH+I/KaIbPxvLaF+9VjnZmPP9vH4VmuzFGaG7eKH6pPxfynP5NYr9kvg80/9HbQ/vq/gX5RDA7Q/vaH+BflNKT/Aoy/5M4n9kPxiJd2MT+yH4xNX5rtEf2pD/lj5Rhh9pD+0Uz/lx3/Qoybbr4i+tP8A3CPS3ZrqwbyF7HXpW0HK9rc5qXw20+WIp/gnC4batx+epm37o4eqTt+hQAp7tn0noVM2a5y1BYp1cJDid2WzdCi4Ww9NwWv2EDsm/wBnisqAVmDvzKiw9Us6eMw+TJep5jW3bqZQEouCL3uykH7tpwN18QdchsL8SOc9QZl0suvfz64wc8BH8r9DqeWPuviOVM6/vCQvuziQP6pvAj/vOesewTkjlI+T8DqeTJu9iiLeRa3aV+cD7Y2Y+HcI4sSM1uwz3Fh2zyjf974rTkgEObliglRl44itEJkoRoeivcPdFFQ9Fe4e6KAVidZ0DODOlkKbfAjAeSp+cI+cU1uwVjpysRLF9kn67r3lxJdi7adMNSCYY1cqWLKRxBsRblJ33kHFsA/4R8puN0YZU832YeGJcfxvJU2dgDwxjf6hnR2/hj6eAcf5a/Kc/wBMbPPpYVh/libpizs7Gwh4Y0/6k7GwcP8AVxzDuqCQHF7KPGgf9P5RCpsk/qgO+mR8Y/sYLI2Ah4Y9v9QSdN2SbZcZU6vTvcjjKNtk9SjsAcfGSeQ2YoBDldLizvz56HQx/tELJ3WfljX8WEanuzUDaY5r6ixIPHnxg96WyuHlG8C/wklPDbLB0qMDx9JxGSo1eApFEVM/lCNM5IN++0nIg7Y1OgtMeR1Q6gknnz11l7jxNpxezZ1eMx9cbx19kQa3OAIjttGuOca47ox42gDOOueRb5NfFv4T1tr908e3oe+JqH96EQExojEsoCVD0V7h7ooqA6K9w90UApmdKZaOGHWfZ8o4wa9Z9nykKc4bG1KfoVGTsU/CEKe82LX9cT3gGUPNR1n2fKOMMOs+z5QgFBvdiubqe9BGG9mJuf6vXrQfODfM16z7PlGOGHWfZ8osBYb21/s0/wAA+c6O9tXmlI/wCB/Nh1n2fKLzYdZ9nylsgVbemof1dL8AnA3mf9lS/BBvmw6z7PlOTQHWY7MBYb0P+ypfgER3oc/qqX4IKOGHWfZ8o/ma9Z9nyi2A0m+ddRYJTHcCJKN+MT9lPUYAGGHWfZ8o4ww6z7PlANB+XOJ+wnqMb8tsR9in6jAHmo7fXGFEdsA0f5dYn7FMeBkbb8YnqT1GAjhh1n2fKc+bDrPs+UAJ197sSwIDqL9SzP1nLMWY3Y6knnLvma9Z9nynJwi9Z9nygA8iK0vHCL1n2fKc+bDrPs+UAkoeivcPdFCFDBrlXU8B1dXdFAP/2Q=="
-              alt="Live from space album cover"
-            />
-            <Box
-              sx={{
-                bgcolor: "#cfe8fc",
-                height: "100%",
-                margin: "20px",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
+      <div style={{ textAlign: "center" }}>About me</div>
+      <div style={{ textAlign: "center", letterSpacing: "-2px" }}>
+        ----------------
+      </div>
+      <ThemeProvider theme={theme}>
+        <Container
+          maxWidth="md"
+          sx={{
+            fontFamily: "Segoe UI Emoji",
+          }}
+        >
+          <Paper data-aos="fade" elevation={24} sx={{ margin: "50px" }}>
+            {/* <img src={BehTransparent}></img> */}
+            <Card sx={{ display: "flex" }}>
               {" "}
-              <Typography component="div" variant="h5">
-                Live From Space
-              </Typography>
-            </Box>{" "}
-          </Card>
-        </Paper>
-      </Container>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: "50vh",
+
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+                image={BehTransparent}
+              />
+              <Box
+                sx={{
+                  height: "100%",
+                  margin: "20px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                {" "}
+                <Typography mt={2} align="center" component="div" variant="h5">
+                  Some <span className="BGradiant">Highlights</span> about me
+                </Typography>
+                <Typography
+                  mt={2}
+                  align="center"
+                  component="div"
+                  variant="caption"
+                >
+                  I am nice an cozy and i am nice, i am very nice and nice nice
+                  nice,meow meow meow. and i am very nice also, last but least i
+                  am very nice
+                </Typography>
+                <Typography
+                  mt={2}
+                  align="center"
+                  component="div"
+                  variant="caption"
+                >
+                  i should mention that also that i am very nice, despite that i
+                  am very nice
+                </Typography>
+                <br></br>
+                <Typography
+                  className="changecolor3"
+                  mt={2}
+                  align="left"
+                  component="div"
+                  variant="h5"
+                >
+                  more
+                </Typography>
+                <Typography
+                  className="changecolor"
+                  mt={0}
+                  align="center"
+                  component="div"
+                  variant="h5"
+                >
+                  about
+                </Typography>
+                <Typography
+                  className="changecolor2"
+                  mt={0}
+                  align="right"
+                  component="div"
+                  variant="h5"
+                >
+                  me?
+                </Typography>
+                <Typography
+                  mt={1}
+                  align="left"
+                  component="div"
+                  variant="overline"
+                >
+                  yes i am nice and cute,also there is many things about me,
+                  like:
+                </Typography>
+                <Typography
+                  mt={1}
+                  align="left"
+                  component="div"
+                  variant="overline"
+                >
+                  Like i am nice
+                </Typography>
+              </Box>{" "}
+            </Card>
+          </Paper>
+        </Container>
+      </ThemeProvider>
     </React.Fragment>
   );
 };

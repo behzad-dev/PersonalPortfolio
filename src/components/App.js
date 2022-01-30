@@ -14,6 +14,7 @@ import MyParallax from "./reusables/Parallax";
 import Parallax2 from "./reusables/Parallax2";
 import Content2 from "./Content2";
 import Content3 from "./Content3";
+
 function App() {
   return (
     <div className="App">
@@ -21,16 +22,17 @@ function App() {
       <ParallaxProvider>
         <MenuBar />
         <ContentTop />
-        <div style={{ textAlign: "center" }}>About me</div>
+        <CustomizedTimeline></CustomizedTimeline>{" "}
+        {/* <ParallaxProvider>
+          <div style={{ height: "500px" }}>
+            s<MyParallax></MyParallax>
+          </div>
+        </ParallaxProvider> */}
+        {/* <div style={{ textAlign: "center" }}>About me</div> */}
         <Content3 />
         {/* <Content2 /> */}
         <ContentGrid />
         <ContentHolderTimeLine />
-        {/* <ParallaxProvider>
-        <div style={{ height: "500px" }}>
-          s<Parallax2></Parallax2>
-        </div>
-      </ParallaxProvider> */}
         <Footer />
       </ParallaxProvider>
       <Router>

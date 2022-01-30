@@ -24,7 +24,12 @@ const MenuBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      sx={{
+        backgroundImage: "linear-gradient(to right, #f9d423 0%, #ff4e50 100%)",
+      }}
+      position="static"
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

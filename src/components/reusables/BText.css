@@ -1,0 +1,45 @@
+.BStyle1 {
+  background: linear-gradient(180deg, #ffd7ff 0%, #301cbe 100%);
+  background-clip: text;
+  color: transparent;
+}
+.BStyle2 {
+  background: linear-gradient(180deg, #00ff006e 0%, #f8090994 100%);
+  background-clip: text;
+  color: transparent;
+}
+.BStyle3 {
+  background: linear-gradient(180deg, #7317c9 0%, #06ffd5 100%);
+  background-clip: text;
+  color: transparent;
+}
+.BStyle4 {
+  background: linear-gradient(180deg, #664e4e 0%, #d5eecb 100%);
+  background-clip: text;
+  color: transparent;
+}
+.BBold {
+  font-weight: bold;
+}
+.BSize_large {
+  font-size: x-large;
+}
+.BStyle5 {
+  /* background: rgba(red, green, blue, 100%); */
+  /* background-color: white; */
+  /* background: linear-gradient(180deg, #00ff006e 0%, #f8090994 100%); */
+
+  /* background-clip: initial; */
+
+  /* color: #06ffd5; */
+  /* opacity: 90%; */
+  /* stroke-opacity: 50%; */
+}
+.test {
+  /* position: absolute; */
+  margin-top: -95px;
+  inset: 0;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
