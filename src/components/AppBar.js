@@ -10,11 +10,16 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
+
 const pages = ["Home", "About me", "Blog"];
 
-const MenuBar = () => {
+const MenuBar = ({ whereToGo }) => {
+  console.log(
+    "🚀 ~ file: AppBar.js ~ line 17 ~ MenuBar ~ whereToGo",
+    whereToGo
+  );
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  console.log(whereToGo);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -40,8 +45,9 @@ const MenuBar = () => {
           >
             <WbSunnyIcon></WbSunnyIcon>
           </Typography>
-
+          {/* <Link to="/pathLink#yourAnchorTag">Your link text</Link> */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            {/* <a href={`#${child.get("label")}`}>{child.get("label")}</a> */}
             <IconButton
               size="large"
               aria-label="account of current user"

@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+
+import SendIcon from "@mui/icons-material/Send";
 import BehTransparent from "./reusables/BehTransparent.png";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { RatingFeedBack } from "./reusables/Rating";
@@ -61,7 +64,6 @@ const ContactForm = () => {
             <Paper
               data-aos="zoom-in-up"
               className="BStyle5 "
-              variant="outlined"
               elevation={12}
               sx={{
                 width: "100%",
@@ -111,7 +113,7 @@ const ContactForm = () => {
                 multiline
                 rows={4}
                 defaultValue="Sup?"
-              /> */}
+              /> */}{" "}
                 <FormControl fullWidth sx={{ m: 1 }} variant="standard">
                   <TextField
                     id="outlined-multiline-static"
@@ -119,7 +121,10 @@ const ContactForm = () => {
                     multiline
                     rows={6}
                     defaultValue="Sup?"
-                  />
+                  />{" "}
+                  <Button variant="outlined" endIcon={<SendIcon />}>
+                    Send
+                  </Button>
                 </FormControl>
               </Box>{" "}
             </Paper>

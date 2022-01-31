@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -14,13 +14,18 @@ import MyParallax from "./reusables/Parallax";
 import Parallax2 from "./reusables/Parallax2";
 import Content2 from "./Content2";
 import Content3 from "./Content3";
+import { HashLink as Linkx } from "react-router-hash-link";
 
 function App() {
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
   return (
     <div className="App">
       {" "}
+      {/* <div ref={myRef}>Element to scroll to</div> */}
       <ParallaxProvider>
         <MenuBar />
+        {/* <button onClick={executeScroll}> Click to scroll </button> */}
         <ContentTop />
         <CustomizedTimeline></CustomizedTimeline>{" "}
         {/* <ParallaxProvider>
@@ -31,18 +36,23 @@ function App() {
         {/* <div style={{ textAlign: "center" }}>About me</div> */}
         <Content3 />
         {/* <Content2 /> */}
+        <span ref={myRef}></span>
         <ContentGrid />
-        <ContentHolderTimeLine />
-        <Footer />
+        <ContentHolderTimeLine /> <Footer />
       </ParallaxProvider>
-      <Router>
+      {/* <Router>
         <div>
           <ul>
             <li>
-              <Link to="/">First Page</Link>
+              <Link onClick={executeScroll} to="/">
+                First Page
+              </Link>
             </li>
             <li>
               <Link to="/classComponent">Second Page</Link>
+            </li>
+            <li>
+              <Link to="/classComponent#a">Second Page</Link>
             </li>
           </ul>
         </div>
@@ -50,8 +60,9 @@ function App() {
         <Routes>
           <Route path="/" exact element={<HelloWorld />}></Route>
           <Route path="/classComponent" exact element={<MyClass />}></Route>
+          <Route path="/classComponent#ss" exact element={<MyClass />}></Route>
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }
