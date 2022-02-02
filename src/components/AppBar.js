@@ -11,15 +11,11 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
-const pages = ["Home", "About me", "Blog"];
+const pages = ["My TimeLine", "About me", "Resume", "Contact Me"];
 
-const MenuBar = ({ whereToGo }) => {
-  console.log(
-    "🚀 ~ file: AppBar.js ~ line 17 ~ MenuBar ~ whereToGo",
-    whereToGo
-  );
+const MenuBar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  console.log(whereToGo);
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -27,7 +23,9 @@ const MenuBar = ({ whereToGo }) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+  const handleScroll = (section) => {
+    props.myProp(section);
+  };
   return (
     <AppBar
       sx={{
@@ -36,6 +34,8 @@ const MenuBar = ({ whereToGo }) => {
       position="static"
     >
       <Container maxWidth="xl">
+        {" "}
+        {/* <button onClick={myProp}> Click to scroll </button> */}
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -57,7 +57,7 @@ const MenuBar = ({ whereToGo }) => {
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton>{" "}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -76,8 +76,9 @@ const MenuBar = ({ whereToGo }) => {
                 display: { xs: "block", md: "none" },
               }}
             >
+              {/* onClick={myProp} */}
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -94,8 +95,13 @@ const MenuBar = ({ whereToGo }) => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
+                onClick={() => {
+                  handleScroll(page);
+
+                  handleCloseNavMenu();
+                }}
                 key={page}
-                onClick={handleCloseNavMenu}
+                // onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}

@@ -17,16 +17,33 @@ import Content3 from "./Content3";
 import { HashLink as Linkx } from "react-router-hash-link";
 
 function App() {
-  const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
+  const refTop = useRef(null);
+  const refAboutMe = useRef(null);
+  const refGrid = useRef(null);
+  const refContactMe = useRef(null);
+
+  const executeScroll = (Ref) => {
+    switch (Ref) {
+      case "My TimeLine":
+        return refTop.current.scrollIntoView();
+      case "About me":
+        return refAboutMe.current.scrollIntoView();
+      case "Resume":
+        return refGrid.current.scrollIntoView();
+      case "Contact Me":
+        return refContactMe.current.scrollIntoView();
+      default:
+    }
+  };
   return (
     <div className="App">
       {" "}
       {/* <div ref={myRef}>Element to scroll to</div> */}
       <ParallaxProvider>
-        <MenuBar />
+        <MenuBar myProp={executeScroll} />
         {/* <button onClick={executeScroll}> Click to scroll </button> */}
         <ContentTop />
+        <span ref={refTop}></span>
         <CustomizedTimeline></CustomizedTimeline>{" "}
         {/* <ParallaxProvider>
           <div style={{ height: "500px" }}>
@@ -34,10 +51,12 @@ function App() {
           </div>
         </ParallaxProvider> */}
         {/* <div style={{ textAlign: "center" }}>About me</div> */}
+        <span ref={refAboutMe}></span>
         <Content3 />
+        <span ref={refGrid}></span>
         {/* <Content2 /> */}
-        <span ref={myRef}></span>
         <ContentGrid />
+        <span ref={refContactMe}></span>
         <ContentHolderTimeLine /> <Footer />
       </ParallaxProvider>
       {/* <Router>

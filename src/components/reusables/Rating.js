@@ -15,7 +15,11 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export function RatingFeedBack() {
+export function RatingFeedBack(props) {
+  const onTrigger = (event) => {
+    // props.handleCallbackLike(event);
+    props.parentCallback(event);
+  };
   return (
     <Box
       sx={{
@@ -24,8 +28,9 @@ export function RatingFeedBack() {
     >
       <Typography component="legend">How much you like me?</Typography>
       <StyledRating
+        // onChange={(event) => console.log(event.target.value)}
+        onChange={(event) => onTrigger(event.target.value)}
         name="customized-color"
-        defaultValue={2}
         getLabelText={(value) => `${value} Heart${value !== 1 ? "s" : ""}`}
         precision={0.5}
         icon={<FavoriteIcon fontSize="inherit" />}

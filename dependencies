@@ -18,3 +18,4 @@ npm i react-scroll-parallax
 npm i sass
  npm i aos --save
  npm install --save react-router-hash-link
+ npm i  firebase --save
