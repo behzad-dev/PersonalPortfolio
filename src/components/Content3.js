@@ -8,7 +8,7 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
-import BehTransparent from "./reusables/BehTransparent.png";
+// import BehTransparent from "./reusables/BehTransparent.png";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
@@ -60,7 +60,7 @@ const Content3 = () => {
                   display: "flex",
                   flexDirection: "column",
                 }}
-                image={BehTransparent}
+                // image={BehTransparent}
               />
               <Box
                 sx={{

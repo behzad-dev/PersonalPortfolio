@@ -5,7 +5,7 @@ import MuiButton from "@mui/material/Button";
 import "./ContentTop.css";
 import "./Content2.css";
 import BounceBall from "./reusables/BounceBall";
-import BehTransparent from "./reusables/BehTransparent.png";
+// import BehTransparent from "./reusables/BehTransparent.png";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
@@ -43,7 +43,10 @@ const WavePart = styled("div")(({}) => ({
   color: "red",
   zIndex: "0",
 }));
-const myColor = "linear-gradient(to right, #f9d423 0%, #ff4e50 100%);";
+const myColor =
+  "linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)";
+// "linear-gradient(to right, #f9d423 0%, #ff4e50 100%);";
+
 function ContentTop() {
   return (
     <div>
@@ -66,16 +69,16 @@ function ContentTop() {
             <Grid container spacing={5}>
               <Grid item xs={12} sm={1}></Grid>
               <Grid item xs={12} sm={3}>
-                <Paper elevation={7}>
-                  <img
+                {/* <Paper elevation={7}> */}
+                {/* <img
                     style={{
                       height: "400px",
                       position: "absolute",
                     }}
                     src={BehTransparent}
                     alt="Logo"
-                  />{" "}
-                </Paper>
+                  />{" "} */}
+                {/* </Paper> */}
               </Grid>
               <Grid item xs={12} sm={7}>
                 {" "}
@@ -86,7 +89,7 @@ function ContentTop() {
                   variant="h2"
                   marked="center"
                 >
-                  <span className="changecolor3">And here you are !</span>
+                  <span className="changecolor3">Hello</span>
                 </MuiTypography>
                 <MuiTypography
                   color="inherit"
@@ -94,7 +97,7 @@ function ContentTop() {
                   variant="h5"
                   sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
                 >
-                  A bright person to to do all!
+                  ... I am Behzad
                 </MuiTypography>{" "}
                 <BounceBall></BounceBall>
                 <MuiButton
@@ -109,7 +112,7 @@ function ContentTop() {
                   Better than you imagine!
                 </MuiButton>
                 <MuiTypography variant="body2" color="inherit" sx={{ mt: 2 }}>
-                  Discover new talents
+                  Let me tell you about myself
                 </MuiTypography>
               </Grid>
               <Grid item xs={12} sm={1}></Grid>

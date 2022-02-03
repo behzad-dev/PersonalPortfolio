@@ -35,37 +35,49 @@ function App() {
       default:
     }
   };
+  const Page1 = () => {
+    return (
+      <div>
+        <ParallaxProvider>
+          {/* <MenuBar myProp={executeScroll} /> */}
+          <ContentTop />
+          <span ref={refTop}></span>
+          <div
+            className="BBold BStyle3 BSize_large"
+            style={{ textAlign: "center", fontStyle: "oblique" }}
+          >
+            My Joruney
+          </div>{" "}
+          <CustomizedTimeline></CustomizedTimeline>{" "}
+          <span ref={refAboutMe}></span>
+          <Content3 />
+          <span ref={refGrid}></span>
+          <ContentGrid />x<span ref={refContactMe}></span>
+          <ContentHolderTimeLine /> <Footer />{" "}
+        </ParallaxProvider>
+      </div>
+    );
+  };
   return (
     <div className="App">
       {" "}
       {/* <div ref={myRef}>Element to scroll to</div> */}
-      <ParallaxProvider>
+      {/* <ParallaxProvider>
         <MenuBar myProp={executeScroll} />
-        {/* <button onClick={executeScroll}> Click to scroll </button> */}
         <ContentTop />
         <span ref={refTop}></span>
-        <CustomizedTimeline></CustomizedTimeline>{" "}
-        {/* <ParallaxProvider>
-          <div style={{ height: "500px" }}>
-            s<MyParallax></MyParallax>
-          </div>
-        </ParallaxProvider> */}
-        {/* <div style={{ textAlign: "center" }}>About me</div> */}
-        <span ref={refAboutMe}></span>
+        <CustomizedTimeline></CustomizedTimeline> <span ref={refAboutMe}></span>
         <Content3 />
         <span ref={refGrid}></span>
-        {/* <Content2 /> */}
-        <ContentGrid />
-        <span ref={refContactMe}></span>
+        <ContentGrid />x<span ref={refContactMe}></span>
         <ContentHolderTimeLine /> <Footer />
-      </ParallaxProvider>
-      {/* <Router>
+      </ParallaxProvider> */}
+      <Router>
         <div>
+          {/* {" "}
           <ul>
             <li>
-              <Link onClick={executeScroll} to="/">
-                First Page
-              </Link>
+              <Link to="/">First Page</Link>
             </li>
             <li>
               <Link to="/classComponent">Second Page</Link>
@@ -73,15 +85,16 @@ function App() {
             <li>
               <Link to="/classComponent#a">Second Page</Link>
             </li>
-          </ul>
+          </ul> */}{" "}
+          <MenuBar myProp={executeScroll} />
         </div>
 
         <Routes>
-          <Route path="/" exact element={<HelloWorld />}></Route>
+          <Route path="/" exact element={<Page1 />}></Route>
           <Route path="/classComponent" exact element={<MyClass />}></Route>
           <Route path="/classComponent#ss" exact element={<MyClass />}></Route>
         </Routes>
-      </Router> */}
+      </Router>
     </div>
   );
 }

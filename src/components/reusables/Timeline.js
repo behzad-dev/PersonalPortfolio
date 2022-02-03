@@ -15,6 +15,7 @@ import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 export default function CustomizedTimeline() {
   return (
     <Timeline position="alternate">
+      {" "}
       <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: "auto 0" }}
@@ -22,7 +23,7 @@ export default function CustomizedTimeline() {
           variant="body2"
           color="text.secondary"
         >
-          6:30 am
+          1991
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -34,9 +35,9 @@ export default function CustomizedTimeline() {
 
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Wake up!
+            Born
           </Typography>
-          <Typography>its old habit</Typography>
+          <Typography>In Tehran</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -45,7 +46,7 @@ export default function CustomizedTimeline() {
           variant="body2"
           color="text.secondary"
         >
-          10:00 am
+          2010
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -56,7 +57,7 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Code
+            Done with Highschool(finally!)
           </Typography>
           <Typography>Because it&apos;s awesome!</Typography>
         </TimelineContent>
@@ -71,9 +72,24 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Sleep
+            B.sc Computer software engineer
           </Typography>
-          <Typography>Because some rest is needed</Typography>
+          <Typography>because i loved it!</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot color="primary" variant="outlined">
+            <HotelIcon />
+          </TimelineDot>
+          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography variant="h6" component="span">
+            Worked in Different shits !
+          </Typography>
+          <Typography>because i loved it!</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>

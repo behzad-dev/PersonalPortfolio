@@ -2,12 +2,12 @@ import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 export default function BounceBall(props) {
   useEffect(() => {
-    gsap.fromTo(
-      blue.current,
-      0.5,
-      { y: -18 },
-      { y: 22, yoyo: true, repeat: -1 }
-    );
+    // gsap.fromTo(
+    //   blue.current,
+    //   0.5,
+    //   { y: -18 },
+    //   { y: 22, yoyo: true, repeat: -1 }
+    // );
     gsap.fromTo(
       green.current,
       0.5,
@@ -33,7 +33,7 @@ export default function BounceBall(props) {
       { y: 22, yoyo: true, repeat: -1 }
     );
   });
-  const blue = useRef(null);
+  // const blue = useRef(null);
   const red = useRef(null);
   const yellow = useRef(null);
   const green = useRef(null);

@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const pages = ["My TimeLine", "About me", "Resume", "Contact Me"];
 
 const MenuBar = (props) => {
@@ -29,7 +29,10 @@ const MenuBar = (props) => {
   return (
     <AppBar
       sx={{
-        backgroundImage: "linear-gradient(to right, #f9d423 0%, #ff4e50 100%)",
+        // backgroundImage: "linear-gradient(to right, #f9d423 0%, #ff4e50 100%)",
+        backgroundImage:
+          "linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)",
+        // background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
       }}
       position="static"
     >
@@ -106,8 +109,14 @@ const MenuBar = (props) => {
               >
                 {page}
               </Button>
-            ))}
-          </Box>
+            ))}{" "}
+          </Box>{" "}
+          <Button variant="contained">
+            {" "}
+            <Link style={{ color: "white" }} to="/classComponent">
+              Login
+            </Link>{" "}
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
