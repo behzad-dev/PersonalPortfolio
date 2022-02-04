@@ -8,6 +8,7 @@ import MuiTypography from "@mui/material/Typography";
 import CustomizedTimeline from "./reusables/Timeline";
 import Parallax2 from "./reusables/Parallax2";
 import { Parallax } from "react-scroll-parallax";
+import "./reusables/BText.css";
 const item = {
   display: "flex",
   flexDirection: "column",
@@ -28,6 +29,7 @@ function ContentHolderTimeLine() {
         >
           <defs>
             <linearGradient id="gradient">
+              {/* #color */}
               <stop offset="0%" stopColor="#fee140" />
               <stop offset="70%" stopColor="#fa709a" />
             </linearGradient>
@@ -44,8 +46,9 @@ function ContentHolderTimeLine() {
         sx={{
           display: "flex",
           overflow: "hidden",
-          background: "linear-gradient(to right, #fa709a 0%, #fee140 100%);",
+          // background: "linear-gradient(to right, #fa709a 0%, #fee140 100%);",
         }}
+        className="BStyle6"
       >
         <ParallaxProvider>
           {" "}

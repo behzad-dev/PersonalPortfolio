@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 .BStyle1 {
   background: linear-gradient(180deg, #ffd7ff 0%, #301cbe 100%);
   background-clip: text;
@@ -42,4 +43,31 @@
   display: flex;
   /* align-items: center; */
   justify-content: center;
+}
+.BStyle6 {
+  /* background: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  background: linear-gradient(
+    to right,
+    #8bf018 0%,
+    #2b76b9 37%,
+    #2cacd1 65%,
+    #35eb93 100%
+  );
+}
+
+.BStyle7 {
+  /* background-image: linear-gradient(to right, #3715f8 0%, #38f9d7 100%); */
+  background-image: linear-gradient(to right, #3715f8 0%, #38f9d7 100%);
+}
+.BStyle8 {
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  /* background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+}
+.font-link {
+  font-family: "Rowdies", cursive;
 }

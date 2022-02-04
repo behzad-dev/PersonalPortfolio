@@ -42,10 +42,14 @@ export default function BounceBall(props) {
     <div style={{ zIndex: "2" }}>
       <svg viewBox="0 0 150 33.2" width="126" height="88">
         {/* <circle ref={blue} cx="16.1" cy="16.6" r="16.1" fill="#527abd" /> */}
-        <circle ref={red} cx="55.2" cy="16.6" r="16.1" fill="#de4431" />
+        {/* <circle ref={red} cx="55.2" cy="16.6" r="16.1" fill="#de4431" />
         <circle ref={yellow} cx="94.3" cy="16.6" r="16.1" fill="#f4b61a" />
         <circle ref={green} cx="133.4" cy="16.6" r="16.1" fill="#009e52" />
-        <circle ref={white} cx="19.4" cy="16.6" r="16.1" fill="#9DF754" />
+        <circle ref={white} cx="19.4" cy="16.6" r="16.1" fill="#9DF754" /> */}
+        <circle ref={red} cx="55.2" cy="16.6" r="16.1" fill="#FFFFFF" />
+        <circle ref={yellow} cx="94.3" cy="16.6" r="16.1" fill="#FFFFFF" />
+        <circle ref={green} cx="133.4" cy="16.6" r="16.1" fill="#FFFFFF" />
+        <circle ref={white} cx="19.4" cy="16.6" r="16.1" fill="#FFFFFF" />
       </svg>
     </div>
   );

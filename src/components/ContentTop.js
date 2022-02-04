@@ -5,26 +5,33 @@ import MuiButton from "@mui/material/Button";
 import "./ContentTop.css";
 import "./Content2.css";
 import BounceBall from "./reusables/BounceBall";
-// import BehTransparent from "./reusables/BehTransparent.png";
+// import BehTransparent from "./reusables/BehTransparent5.png";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
+import "./reusables/BText.css";
+import TextAnimation from "./reusables/TextAnimation";
+// const theme = createTheme({
+//   typography: {
+//     fontFamily: [
+//       "-apple-system",
+//       "BlinkMacSystemFont",
+//       '"Segoe UI"',
+//       "Roboto",
+//       '"Helvetica Neue"',
+//       "Arial",
+//       "sans-serif",
+//       '"Apple Color Emoji"',
+//       '"Segoe UI Emoji"',
+//       '"Segoe UI Symbol"',
+//     ].join(","),
+//   },
+// });
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(","),
+    fontFamily: ["Quicksand", "sans-serif"].join(","),
   },
 });
 const LayoutRoot = styled("section")(({ theme }) => ({
@@ -53,9 +60,13 @@ function ContentTop() {
       {" "}
       <ThemeProvider theme={theme}>
         <LayoutRoot
-          sx={{
-            backgroundImage: myColor,
-          }}
+          className="BStyle7"
+          sx={
+            {
+              // fontFamily: "sans-serif",
+              // backgroundImage: myColor,
+            }
+          }
         >
           <Container
             sx={{
@@ -64,21 +75,22 @@ function ContentTop() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              // fontFamily: "sans-serif",
             }}
           >
             <Grid container spacing={5}>
               <Grid item xs={12} sm={1}></Grid>
               <Grid item xs={12} sm={3}>
-                {/* <Paper elevation={7}> */}
-                {/* <img
+                {/* <Paper elevation={7}>
+                  <img
                     style={{
                       height: "400px",
                       position: "absolute",
                     }}
                     src={BehTransparent}
                     alt="Logo"
-                  />{" "} */}
-                {/* </Paper> */}
+                  />{" "}
+                </Paper> */}
               </Grid>
               <Grid item xs={12} sm={7}>
                 {" "}
@@ -88,26 +100,31 @@ function ContentTop() {
                   align="left"
                   variant="h2"
                   marked="center"
+                  // sx={{ fontFamily: "BlinkMacSystemFont" }}
                 >
-                  <span className="changecolor3">Hello</span>
+                  <span> Hello ...</span>
                 </MuiTypography>
                 <MuiTypography
                   color="inherit"
                   align="left"
                   variant="h5"
-                  sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
+                  sx={{
+                    // fontFamily: "BlinkMacSystemFont",
+                    mb: 4,
+                    mt: { sx: 4, sm: 10 },
+                  }}
                 >
-                  ... I am Behzad
+                  ... I am Behzad <TextAnimation></TextAnimation>
                 </MuiTypography>{" "}
                 <BounceBall></BounceBall>
                 <MuiButton
-                  color="secondary"
+                  color="warning"
                   variant="contained"
                   align="right"
                   size="large"
                   component="a"
                   href="/premium-themes/onepirate/sign-up/"
-                  sx={{ minWidth: 200 }}
+                  sx={{ color: "black", background: "white", minWidth: 200 }}
                 >
                   Better than you imagine!
                 </MuiButton>
@@ -160,9 +177,12 @@ function ContentTop() {
           </Container>{" "}
         </LayoutRoot>{" "}
         <WavePart
-          sx={{
-            backgroundImage: myColor,
-          }}
+          className="BStyle7"
+          sx={
+            {
+              // backgroundImage: myColor,
+            }
+          }
         >
           <div className="custom-shape-divider-bottom-1643280713">
             <svg

@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 export default function CustomizedTimeline() {
   return (
-    <Timeline position="alternate">
+    <Timeline position="alternate" style={{ background: "grey" }}>
       {" "}
       <TimelineItem>
         <TimelineOppositeContent

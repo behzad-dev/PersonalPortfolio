@@ -46,7 +46,7 @@ const ContactForm = () => {
         <ThemeProvider theme={theme}>
           {" "}
           <div
-            className="BBold BStyle2 BSize_large"
+            className="BBold BStyle1 BSize_large"
             style={{ textAlign: "center", fontStyle: "oblique" }}
           >
             Contact Form

@@ -15,7 +15,7 @@ import Parallax2 from "./reusables/Parallax2";
 import Content2 from "./Content2";
 import Content3 from "./Content3";
 import { HashLink as Linkx } from "react-router-hash-link";
-
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 function App() {
   const refTop = useRef(null);
   const refAboutMe = useRef(null);
@@ -35,25 +35,32 @@ function App() {
       default:
     }
   };
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Quicksand", "sans-serif"].join(","),
+    },
+  });
   const Page1 = () => {
     return (
       <div>
         <ParallaxProvider>
-          {/* <MenuBar myProp={executeScroll} /> */}
-          <ContentTop />
-          <span ref={refTop}></span>
-          <div
-            className="BBold BStyle3 BSize_large"
-            style={{ textAlign: "center", fontStyle: "oblique" }}
-          >
-            My Joruney
-          </div>{" "}
-          <CustomizedTimeline></CustomizedTimeline>{" "}
-          <span ref={refAboutMe}></span>
-          <Content3 />
-          <span ref={refGrid}></span>
-          <ContentGrid />x<span ref={refContactMe}></span>
-          <ContentHolderTimeLine /> <Footer />{" "}
+          <ThemeProvider theme={theme}>
+            {/* <MenuBar myProp={executeScroll} /> */}
+            <ContentTop />
+            <span ref={refTop}></span>
+            <div
+              className="BBold BStyle3 BSize_large"
+              style={{ textAlign: "center", fontStyle: "oblique" }}
+            >
+              My Joruney
+            </div>{" "}
+            <CustomizedTimeline></CustomizedTimeline>{" "}
+            <span ref={refAboutMe}></span>
+            <Content3 />
+            <span ref={refGrid}></span>
+            <ContentGrid />x<span ref={refContactMe}></span>
+            <ContentHolderTimeLine /> <Footer />{" "}
+          </ThemeProvider>
         </ParallaxProvider>
       </div>
     );

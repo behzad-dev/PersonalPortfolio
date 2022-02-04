@@ -4,10 +4,11 @@ import Container from "@mui/material/Container";
 import { styled } from "@mui/system";
 import Parallax2 from "./reusables/Parallax2";
 import { ParallaxProvider } from "react-scroll-parallax";
+import "./reusables/BText.css";
 const MyComponent = styled("div")({
   color: "darkslategray",
 
-  background: "linear-gradient(to right, #fa709a 0%, #fee140 100%);",
+  // background: "linear-gradient(to right, #fa709a 0%, #fee140 100%);",
   padding: 8,
   borderRadius: 4,
   minHeight: 100,
@@ -16,7 +17,7 @@ const MyComponent = styled("div")({
 });
 const Footer = () => {
   return (
-    <MyComponent>
+    <MyComponent className="BStyle6">
       <Container maxWidth="sm">
         {" "}
         {/* <ParallaxProvider>

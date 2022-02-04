@@ -17,16 +17,19 @@ import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 const theme = createTheme({
   typography: {
     fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
+      //todo: here it made the text be blury
+      // "Quicksand",
+      // "sans-serif",
+      // "-apple-system",
+      // "BlinkMacSystemFont",
+      // '"Segoe UI"',
+      // "Roboto",
+      // '"Helvetica Neue"',
+      // "Arial",
+      // "sans-serif",
+      // '"Apple Color Emoji"',
+      // '"Segoe UI Emoji"',
+      // '"Segoe UI Symbol"',
     ].join(","),
   },
 });
@@ -44,9 +47,11 @@ const Content3 = () => {
       <ThemeProvider theme={theme}>
         <Container
           maxWidth="md"
-          sx={{
-            fontFamily: "Segoe UI Emoji",
-          }}
+          sx={
+            {
+              // fontFamily: "Segoe UI Emoji",
+            }
+          }
         >
           <Paper data-aos="fade" elevation={24} sx={{ margin: "50px" }}>
             {/* <img src={BehTransparent}></img> */}
