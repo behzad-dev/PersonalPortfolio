@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 export default function TextAnimation() {
-  const reactArray = "POWER".split("");
+  const reactArray = "BEHZAD".split("");
   return (
     <Wrapper>
       {reactArray.map((item, index) => (
@@ -40,5 +40,8 @@ const Wrapper = styled.span`
   }
   span:nth-child(5) {
     animation-delay: 0.5s;
+  }
+  span:nth-child(6) {
+    animation-delay: 0.6s;
   }
 `;

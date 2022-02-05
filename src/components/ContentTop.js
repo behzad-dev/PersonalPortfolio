@@ -6,6 +6,7 @@ import "./ContentTop.css";
 import "./Content2.css";
 import BounceBall from "./reusables/BounceBall";
 // import BehTransparent from "./reusables/BehTransparent5.png";
+import WELCOME from "./reusables/WELCOME.png";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
@@ -13,6 +14,8 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import "./reusables/BText.css";
 import TextAnimation from "./reusables/TextAnimation";
+import CardMedia from "@mui/material/CardMedia";
+
 // const theme = createTheme({
 //   typography: {
 //     fontFamily: [
@@ -63,6 +66,7 @@ function ContentTop() {
           className="BStyle7"
           sx={
             {
+              // backgroundImage: `url(${WELCOME})`,
               // fontFamily: "sans-serif",
               // backgroundImage: myColor,
             }
@@ -102,7 +106,7 @@ function ContentTop() {
                   marked="center"
                   // sx={{ fontFamily: "BlinkMacSystemFont" }}
                 >
-                  <span> Hello ...</span>
+                  <span> Welcome!</span>
                 </MuiTypography>
                 <MuiTypography
                   color="inherit"
@@ -114,10 +118,11 @@ function ContentTop() {
                     mt: { sx: 4, sm: 10 },
                   }}
                 >
-                  ... I am Behzad <TextAnimation></TextAnimation>
+                  <span style={{ color: "white" }}>... I am </span>{" "}
+                  <TextAnimation></TextAnimation>
                 </MuiTypography>{" "}
                 <BounceBall></BounceBall>
-                <MuiButton
+                {/* <MuiButton
                   color="warning"
                   variant="contained"
                   align="right"
@@ -127,9 +132,9 @@ function ContentTop() {
                   sx={{ color: "black", background: "white", minWidth: 200 }}
                 >
                   Better than you imagine!
-                </MuiButton>
-                <MuiTypography variant="body2" color="inherit" sx={{ mt: 2 }}>
-                  Let me tell you about myself
+                </MuiButton> */}
+                <MuiTypography variant="h5" color="inherit" sx={{ mt: 2 }}>
+                  Let me tell you about myself...
                 </MuiTypography>
               </Grid>
               <Grid item xs={12} sm={1}></Grid>
@@ -193,7 +198,9 @@ function ContentTop() {
             >
               <path
                 d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                className="shape-fill"
+                // className="shape-fill"
+                className="BStyle9"
+                // #wavetop
               ></path>
             </svg>
           </div>

@@ -42,17 +42,25 @@ function App() {
   });
   const Page1 = () => {
     return (
-      <div>
+      <div
+        className="BStyle9"
+        // style={{ backgroundColor: "black" }}
+      >
         <ParallaxProvider>
           <ThemeProvider theme={theme}>
             {/* <MenuBar myProp={executeScroll} /> */}
             <ContentTop />
             <span ref={refTop}></span>
             <div
-              className="BBold BStyle3 BSize_large"
-              style={{ textAlign: "center", fontStyle: "oblique" }}
+              className="BBold  BSize_large"
+              style={{
+                textAlign: "center",
+                fontStyle: "",
+
+                // background: "black",
+              }}
             >
-              My Joruney
+              My Joruney Begins in Tehran, 1991
             </div>{" "}
             <CustomizedTimeline></CustomizedTimeline>{" "}
             <span ref={refAboutMe}></span>

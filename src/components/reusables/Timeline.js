@@ -12,54 +12,61 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
 import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
+import ChildCareIcon from "@mui/icons-material/ChildCare";
+import SchoolIcon from "@mui/icons-material/School";
 export default function CustomizedTimeline() {
   return (
-    <Timeline position="alternate" style={{ background: "grey" }}>
+    <Timeline
+      position="alternate"
+      className="BStyle9"
+      // style={{ background: "black", color: "white" }}
+    >
       {" "}
       <TimelineItem>
-        <TimelineOppositeContent
+        {/* <TimelineOppositeContent
           sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
-          color="text.secondary"
+          color=""
         >
           1991
-        </TimelineOppositeContent>
+        </TimelineOppositeContent> */}
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color="primary">
-            <EmojiFoodBeverageIcon />
+            <ChildCareIcon fontSize="large" />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
 
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Born
+            Since young age I was fascinated with technology
           </Typography>
-          <Typography>In Tehran</Typography>
+          {/* <Typography>In Tehran</Typography> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
+          fontSize="large"
           sx={{ m: "auto 0" }}
           variant="body2"
-          color="text.secondary"
+          color=""
         >
-          2010
+          2016
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color="primary">
-            <LaptopMacIcon />
+            <SchoolIcon fontSize="large" />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Done with Highschool(finally!)
+            Thats why I decided to get my<br></br> B.Sc in Software Engineering
           </Typography>
-          <Typography>Because it&apos;s awesome!</Typography>
+          {/* <Typography>Because it&apos;s awesome!</Typography> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -72,9 +79,9 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            B.sc Computer software engineer
+            Soon After that I got my first job as programmer ( yay )
           </Typography>
-          <Typography>because i loved it!</Typography>
+          {/* <Typography>because i loved it!</Typography> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>

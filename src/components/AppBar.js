@@ -115,11 +115,12 @@ const MenuBar = (props) => {
               </Button>
             ))}{" "}
           </Box>{" "}
-          <Button variant="contained">
+          <Button
+            style={{ background: "white", color: "black" }}
+            variant="contained"
+          >
             {" "}
-            <Link style={{ color: "white" }} to="/classComponent">
-              Login
-            </Link>{" "}
+            <Link to="/classComponent">Login</Link>{" "}
           </Button>
         </Toolbar>
       </Container>

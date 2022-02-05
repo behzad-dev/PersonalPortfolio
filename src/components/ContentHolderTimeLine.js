@@ -30,8 +30,11 @@ function ContentHolderTimeLine() {
           <defs>
             <linearGradient id="gradient">
               {/* #color */}
-              <stop offset="0%" stopColor="#fee140" />
-              <stop offset="70%" stopColor="#fa709a" />
+              <stop stopColor="#0c4555" />
+              <stop stopColor="#004c55" />
+              <stop stopColor="#005250" />
+              <stop stopColor="#005747" />
+              <stop stopColor="#135b39" />
             </linearGradient>
           </defs>
           <path
