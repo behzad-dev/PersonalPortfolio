@@ -80,7 +80,15 @@ export default function VerticalTabs() {
         couple of
       </TabPanel>
       <TabPanel value={value} index={3}>
-        coding
+        <li>Jogging!</li>
+        <li>
+          <b>gaming</b>
+        </li>
+
+        <li>
+          {" "}
+          <b>Hiking</b>
+        </li>
       </TabPanel>
       <TabPanel value={value} index={4}>
         football

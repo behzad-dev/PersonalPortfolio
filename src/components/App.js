@@ -6,14 +6,14 @@ import HelloWorld from "./HelloWorld";
 import MyClass from "./MyClass";
 import MenuBar from "./AppBar";
 import ContentTop from "./ContentTop";
-import ContentHolderTimeLine from "./ContentHolderTimeLine";
+import ContentContactMe from "./ContentContactMe";
 import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
-import CustomizedTimeline from "./reusables/Timeline";
+import TimelineComponent from "./reusables/TimelineComponent";
 import MyParallax from "./reusables/Parallax";
 import Parallax2 from "./reusables/Parallax2";
 import Content2 from "./Content2";
-import Content3 from "./Content3";
+import ContentAboutMe from "./ContentAboutMe";
 import { HashLink as Linkx } from "react-router-hash-link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 function App() {
@@ -56,18 +56,19 @@ function App() {
               style={{
                 textAlign: "center",
                 fontStyle: "",
-
                 // background: "black",
               }}
             >
               My Joruney Begins in Tehran, 1991
+              <br />a short brief story from my journey
             </div>{" "}
-            <CustomizedTimeline></CustomizedTimeline>{" "}
+            <TimelineComponent></TimelineComponent>{" "}
             <span ref={refAboutMe}></span>
-            <Content3 />
+            <ContentAboutMe />
             <span ref={refGrid}></span>
-            <ContentGrid />x<span ref={refContactMe}></span>
-            <ContentHolderTimeLine /> <Footer />{" "}
+            <ContentGrid />
+            <span ref={refContactMe}></span>
+            <ContentContactMe /> <Footer />{" "}
           </ThemeProvider>
         </ParallaxProvider>
       </div>

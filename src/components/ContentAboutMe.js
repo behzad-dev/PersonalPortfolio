@@ -18,7 +18,7 @@ const theme = createTheme({
   typography: {
     fontFamily: [
       //todo: here it made the text be blury
-      // "Quicksand",
+      "Quicksand",
       // "sans-serif",
       // "-apple-system",
       // "BlinkMacSystemFont",
@@ -33,13 +33,13 @@ const theme = createTheme({
     ].join(","),
   },
 });
-const Content3 = () => {
+const ContentAboutMe = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, easing: "ease-in-sine" });
   }, []);
   return (
     <React.Fragment>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <div style={{ textAlign: "center" }}>About me</div>
       <div style={{ textAlign: "center", letterSpacing: "-2px" }}>
         ----------------
@@ -47,11 +47,11 @@ const Content3 = () => {
       <ThemeProvider theme={theme}>
         <Container
           maxWidth="md"
-          sx={
-            {
-              // fontFamily: "Segoe UI Emoji",
-            }
-          }
+          sx={{
+            fontWeight: "200",
+            color: "black",
+            // fontFamily: "Segoe UI Emoji",
+          }}
         >
           <Paper data-aos="fade" elevation={24} sx={{ margin: "50px" }}>
             {/* <img src={BehTransparent}></img> */}
@@ -77,7 +77,8 @@ const Content3 = () => {
               >
                 {" "}
                 <Typography mt={2} align="center" component="div" variant="h5">
-                  Some <span className="BGradiant">Highlights</span> about me
+                  fun facts <span className="BGradiant"> about me</span> that
+                  you might know!
                 </Typography>
                 <Typography
                   mt={2}
@@ -85,9 +86,10 @@ const Content3 = () => {
                   component="div"
                   variant="caption"
                 >
-                  I am nice an cozy and i am nice, i am very nice and nice nice
-                  nice,meow meow meow. and i am very nice also, last but least i
-                  am very nice
+                  I am an energetic person with lots of motivation and exited
+                  about future.coming here to Germany alone was the biggest
+                  challenge for me and a great step towards the future that I
+                  envision .
                 </Typography>
                 <Typography
                   mt={2}
@@ -95,8 +97,8 @@ const Content3 = () => {
                   component="div"
                   variant="caption"
                 >
-                  i should mention that also that i am very nice, despite that i
-                  am very nice
+                  I am looking forward to gain new experience. and be faced with
+                  new challenges.
                 </Typography>
                 <br></br>
                 <Typography
@@ -132,8 +134,8 @@ const Content3 = () => {
                   component="div"
                   variant="overline"
                 >
-                  yes i am nice and cute,also there is many things about me,
-                  like:
+                  My passion for programming will help me solve all problems I
+                  will be faced with.
                 </Typography>
                 <Typography
                   mt={1}
@@ -151,4 +153,4 @@ const Content3 = () => {
     </React.Fragment>
   );
 };
-export default Content3;
+export default ContentAboutMe;

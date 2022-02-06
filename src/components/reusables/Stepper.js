@@ -10,12 +10,12 @@ import Typography from "@mui/material/Typography";
 
 const steps = [
   {
-    label: "A bright mind",
-    description: `a great mind is all you need`,
+    label: "Where do you see yourself in 5 years?",
+    description: `In a better position`,
   },
   {
-    label: "pure talent",
-    description: "yes exactly",
+    label: "What is your biggest strength/weakness",
+    description: "not much",
   },
   {
     label: "last but not least",

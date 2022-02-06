@@ -1,4 +1,4 @@
-import CustomizedTimeline from "./reusables/Timeline";
+import CustomizedTimeline from "./reusables/TimelineComponent";
 import { Parallax } from "react-scroll-parallax";
 import "./Content2.css";
 import ring from "./Ring-of-dots.svg";
